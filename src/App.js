@@ -31,11 +31,12 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
        
        <input type='button' value="Create Shopping Item" onClick={() => handleAddItem()}/> {/* creates the button. saves datadue to onClick */}
         </div>
-          
+          <br></br>
       <div className='list'>
              {list.map((item, index)=>{
                return(
                  <div>
+                   
                    <p onClick={() => handleRemoveItem(index)}>{item.title}</p> {/* removes item from list whenever we click it*/}
                    </div>
                )

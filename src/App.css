@@ -30,7 +30,11 @@
 .list { /* creates styling options for the list*/
 
   box-shadow: 0 0 0 2px #d0d0d0;
-
+  min: width 5px;;
+  min-height: 3vh;
+  border-radius:5px;
+  margin: bottom 15px;;
+  cursor: pointer;
 }
 
 @keyframes App-logo-spin {
