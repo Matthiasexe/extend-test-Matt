@@ -1,0 +1,75 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header { /* if class name is "App-Header" this will change how it looks*/
+  background-color:#2F4F4F;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.list { /* creates styling options for the list*/
+
+  box-shadow: 0 0 0 2px #d0d0d0;
+  min: width 5px;;
+  min-height: 3vh;
+  border-radius:5px;
+  margin: bottom 15px;;
+  cursor: pointer;
+}
+
+.menu a { /* controls how the links look */
+text-decoration: none;
+display: block;
+color: #fff;
+}
+.menu2 a { /* controls how the links look */
+  text-decoration: none;
+  color: #fff;
+  }
+
+.menu li{ /* for organizing the links */
+  font-size: 1.0;
+  height: 40px;
+  border-bottom: 1px solid #d0d0d0;
+  line-height: 40px;
+ 
+}
+
+.menu ul {
+  background-color: #2F4F4F; /* makes background of links same color as webpage */
+  margin:0;
+}
+
+ul {
+  list-style-type:none;
+  padding:0;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
