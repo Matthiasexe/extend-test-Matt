@@ -42,6 +42,10 @@ text-decoration: none;
 display: block;
 color: #fff;
 }
+.menu2 a { /* controls how the links look */
+  text-decoration: none;
+  color: #fff;
+  }
 
 .menu li{ /* for organizing the links */
   font-size: 1.0;

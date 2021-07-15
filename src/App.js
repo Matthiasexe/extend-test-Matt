@@ -34,7 +34,7 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
 
     <Router> {/* keeps UI in sync with the URL */}
 
-    <div className='App-header'>
+<div className='App-header'>
       <h1>My Shopping List</h1>
       <div className='input'>
        <input type='text' value={inputData} onChange={(event) => setInputData(event.target.value)}/>{/* stores values entered into text box. will not save values unless "onChange is used" */}
@@ -52,7 +52,7 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
                )
              })}
       </div>
-
+ 
     <div className="menu"> {/* allows you to seperate the code and cistomize it according to class name*/}
       <ul>{/* makes an unordered list*/ }
         <li><Link to="/"> Home </Link></li> {/* makes a list */}
