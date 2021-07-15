@@ -1,21 +1,26 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
-// Match covers if path ever changes
+import { Link, Route } from 'react-router-dom';
+import List from './List';
 
-const List = ({ match }) => ( 
- <div className="menu2">
-    <ul>
-        {
-            [...Array(5).keys()].map(n => {
-                return <li key={n}>
-                    <Link to={`${match.url}/${n+1}`}> 
-                        List {n+1}
-                    </Link>
-                </li>
-            })
-        }
-    </ul>
-</div>
-);
+/* Match covers if path ever changes*/
 
-export default List;
+{/**delete here*/}
+const Lists = ({ match }) => ( 
+    <div className="menu2">
+       <ul>
+           {
+               [...Array(5).keys()].map(n => {
+                   return <li key={n}>
+                       <Link to={`${match.url}/${n+1}`}> 
+                           List {n+1}
+                       </Link>
+                   </li>
+               })
+           }
+       </ul>
+       <Route path={`${match.url}/:id(\\d+)`} component={List} />
+   </div>
+   );
+   {/* stop delete here */}
+
+export default Lists;

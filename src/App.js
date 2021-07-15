@@ -67,6 +67,7 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
       <Redirect to="/"/> {/* navigates to new component if non existent path is entered*/}
       </Switch>
     </div>
+
     </div>
      </Router>
   );
