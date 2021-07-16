@@ -14,7 +14,7 @@
   }
 }
 
-.App-header { /* if class name is "App-Header" this will change how it looks*/
+.background { /* if class name is "App-Header" this will change how it looks*/
   background-color:#2F4F4F;
   min-height: 100vh;
   display: flex;
@@ -24,13 +24,9 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-.list { /* creates styling options for the list*/
-
+.list { /* creates styling options for the list */
+ 
   box-shadow: 0 0 0 2px #d0d0d0;
-  min: width 5px;;
   min-height: 3vh;
   border-radius:5px;
   margin: bottom 15px;;
@@ -44,14 +40,16 @@ color: #fff;
 }
 .menu2 a { /* controls how the links look */
   text-decoration: none;
-  color: #fff;
+  color: rgb(248, 242, 242);
   }
 
 .menu li{ /* for organizing the links */
+  text-align: center;
   font-size: 1.0;
   height: 40px;
   border-bottom: 1px solid #d0d0d0;
   line-height: 40px;
+  width: 100%;;
  
 }
 
