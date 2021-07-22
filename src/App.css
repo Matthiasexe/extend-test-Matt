@@ -32,7 +32,9 @@
   padding: 0px;
   cursor: pointer;
 }
-
+.input{
+  padding-bottom: 2px;
+}
 .menu a { /* controls how the links look */
 text-decoration: none;
 display: block;
