@@ -55,10 +55,7 @@ function CreateList (props) {
       <div className="list">
         {allLists.map((item, pop) => {
           return (
-            <p key={pop}>
-              {item.title}
-              {item.value}
-            </p>
+            <p key={pop}> {item.title} {item.value} </p>
 
           )
         })}
