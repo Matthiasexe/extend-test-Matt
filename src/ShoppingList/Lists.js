@@ -1,24 +1,24 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
-import List from './List'
 
-/* Match covers if path ever changes */
-
-const Lists = ({ match }) => (
-  <div className="menu2">
-    <ul>
-      {
-        [...Array(5).keys()].map((n) => {
-          return <li key={n}>
-            <Link to={`${match.url}/${n + 1}`}>
-              {'List'} {n + 1}
-            </Link>
-          </li>
-        })
-      }
-    </ul>
-    <Route path={`${match.url}/:id(\\d+)`} component={List} />
-  </div>
-)
-
+function Lists (props) {
+  return (
+    <div className ='list' >
+      {(props.allLists).map((item, index) => {
+        return (
+          <div key = {index} >
+            <p> {item.title} </p>
+            <p> {(item.value).map((second, i) => {
+              return (
+                <div className='Final' key = {i}>
+                  <p>{second}</p>
+                </div>
+              )
+            })} </p>
+            <br></br>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
 export default Lists

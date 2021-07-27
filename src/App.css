@@ -13,38 +13,45 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
-.background { /* if class name is "App-Header" this will change how it looks*/
-  background-color:#2F4F4F;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+.background { /* for app background */
+  background-color: #B0E0E6 ;
   align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100vh;
+  font-size:calc(10px +2vmin);
+  color:#3d3b3b;
+  display:flex;
+  flex-direction: column;
+
 }
 
+.Final{
+  
+  box-shadow: 0 0 0 0 3px #3d3b3b;
+  min-height:1vh;
+  border-radius: 5px;
+
+}
 .list { /* creates styling options for the list */
  
-  box-shadow: 0 0 0 3px #3d3b3b;
-  min-height: 1vh;
+  min-height: 5vh;
   border-radius: 5px;
   padding: 0px;
   cursor: pointer;
+  border-spacing: 5px;
+  border-collapse: separate;
 }
 .input{
   padding-bottom: 2px;
+  box-shadow:0 0 0 0 3px #3d3d3b;
+  border-radius:5px;
+  
 }
-.menu a { /* controls how the links look */
-text-decoration: none;
+.menu { /* controls how the links look */
+
 display: block;
-color: #fff;
+color:#d0d0d0;
+
 }
-.menu2 a { /* controls how the links look */
-  text-decoration: none;
-  color: rgb(248, 242, 242);
-  display:block;
-  }
 
 .menu li{ /* for organizing the links */
   text-align: center;
@@ -52,13 +59,14 @@ color: #fff;
   height: 40px;
   border-bottom: 1px solid #d0d0d0;
   line-height: 40px;
-  width: 100%;;
- 
+  width: 100%;
+  color: #3d3b3b;
 }
 
 .menu ul {
-  background-color: #2F4F4F; /* makes background of links same color as webpage */
+  background-color: #B0E0E6; /* makes background of links same color as webpage */
   margin:0;
+  color: #3d3b3b;
 }
 
 ul {
