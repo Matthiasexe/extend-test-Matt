@@ -13,10 +13,16 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.Homepage
+{
+  color: #fff;
+  text-align: center;
+  background-color: #2F4F4F;
+  height: 1000vh;
+}
 .App-header { /* if class name is "App-Header" this will change how it looks*/
-  background-color:#2F4F4F;
-  min-height: 100vh;
+ 
+
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -3,7 +3,7 @@ import React, {useState} from 'react' // use state allows you to add react state
 import { render } from '@testing-library/react';
 import { BrowserRouter as Router} from 'react-router-dom';
 import{
-  Route, Link, Switch,Redirect
+  Route, Link, Switch, Redirect
 } from 'react-router-dom'
 
 import Home from './Home'; // reminds me of object oriented programming. where you split up functions in differnt code files and put them all together in one code file 
@@ -33,25 +33,10 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
   return (
 
     <Router> {/* keeps UI in sync with the URL */}
-
-<div className='App-header'>
-      <h1>My Shopping List</h1>
-      <div className='input'>
-       <input type='text' value={inputData} onChange={(event) => setInputData(event.target.value)}/>{/* stores values entered into text box. will not save values unless "onChange is used" */}
-       
-       <input type='button' value="Create Shopping Item" onClick={() => handleAddItem()}/> {/* creates the button. saves datadue to onClick */}
-        </div>
-          <br></br>
-      <div className='list'>
-             {list.map((item, index)=>{
-               return(
-                 <div>
-                   
-                   <p onClick={() => handleRemoveItem(index)}>{item.title}</p> {/* removes item from list whenever we click it*/}
-                   </div>
-               )
-             })}
-      </div>
+    <div className="Homepage">
+    <h1>Personal Shopping Helper</h1>
+    
+      
  
     <div className="menu"> {/* allows you to seperate the code and cistomize it according to class name*/}
       <ul>{/* makes an unordered list*/ }
@@ -67,7 +52,6 @@ const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
       <Redirect to="/"/> {/* navigates to new component if non existent path is entered*/}
       </Switch>
     </div>
-
     </div>
      </Router>
   );
