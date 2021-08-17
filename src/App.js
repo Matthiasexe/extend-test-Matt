@@ -1,60 +1,45 @@
 import './App.css';
-import React, {useState} from 'react' // use state allows you to add react state function components. always use at the top of a  react function. 
-import { render } from '@testing-library/react';
-import { BrowserRouter as Router} from 'react-router-dom';
+import React, {useState} from 'react';
 import{
-  Route, Link, Switch, Redirect
-} from 'react-router-dom'
+   Link,
+   Route,
+   Switch,
+   Redirect,
+   BrowserRouter as Router
+  } from 'react-router-dom'
 
-import Home from './Home'; // reminds me of object oriented programming. where you split up functions in differnt code files and put them all together in one code file 
-import Lists from './Lists';
-function App() {
+  import CreateList from './components/CreateList/CreateList';
+  import SavedLists from './components/SavedList/SavedLists';
 
-  const [list, setList] = useState([]); // list stores value. set list updates the list
-  const [inputData, setInputData] = useState('');
-
-  const handleAddItem = () =>{   {/* takes values entered in the text feild amd reads it*/}
-  const newList = [...list, {title: inputData}];
-  setList(newList);
-  setInputData('');
-  console.log(list)
-}
-
-const handleRemoveItem = (index) => { {/* removes data once it is clicked */}
-  const newList =[];
-  for(let i = 0; i< list.length; i++){ 
-    if (index != i){
-      newList.push(list[i]);
-    }
-  }
-  setList(newList);
-}
-
-  return (
-
-    <Router> {/* keeps UI in sync with the URL */}
-    <div className="Homepage">
-    <h1>Personal Shopping Helper</h1>
-    
-      
- 
-    <div className="menu"> {/* allows you to seperate the code and cistomize it according to class name*/}
-      <ul>{/* makes an unordered list*/ }
-        <li><Link to="/"> Home </Link></li> {/* makes a list */}
-       <li> <Link to="/lists"> Lists </Link> {/* renders navigation link */}</li>
-      </ul>
-
-    </div>
-    <div className="App-intro">
-      <Switch> {/* makes path mathcing exclusive rather than inclusive. renders only the first route that matches the location*/}
-      <Route exact path="/"component={Home}/> {/* Route sends the webpage to whatever option the user chooses*/}
-      <Route path="/lists" component={Lists}/>
-      <Redirect to="/"/> {/* navigates to new component if non existent path is entered*/}
-      </Switch>
+  function App(){
+    const[ allLists, setallLists] = useState([])
+  return(
+  <Router>
+  <div className='app-page'>
+    <div className='wrap'>
+    <div className='header-card'>
+    <header className='app-header'>
+      <h1 className='app-title'>Shopping List V <img src="./images/Dark-3.png" alt="" height="55" width="45"/> </h1>
+      </header>
     </div>
     </div>
-     </Router>
+      <div className='menu'>
+        <ul>
+        <li><Link to='/CreateList'>Create List</Link></li>
+        <li><Link to='/SavedLists'>Saved Lists</Link></li>
+        </ul>
+      </div>
+      <div className='app-intro'>
+    <Switch>
+      <Route exact path='/CreateList' component={CreateList}> <CreateList setallLists = {setallLists}/> </Route>
+      <Route path='/SavedLists' component={SavedLists}> <SavedLists allLists = {allLists}/></Route>
+      <Redirect to ='/CreateList' />
+    </Switch>
+      </div>
+  </div>
+  </Router>
   );
-}
+ }
 
-export default App;
+
+export default App;// overhauled using things i learned in the extend-app

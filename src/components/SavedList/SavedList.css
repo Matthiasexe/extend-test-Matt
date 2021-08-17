@@ -1,0 +1,27 @@
+.Saved-List-Page{
+display: flex;
+justify-content: center;
+align-items:center;
+padding-top: 75px;
+flex-wrap:wrap;
+}
+.Saved-List-Cards{
+background-color:#FFF9EC;
+width:300px;
+height:min-content;
+border-radius:5px;
+padding:20px;
+box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.051),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.073),
+  0 12.5px 10px rgba(0, 0, 0, 0.09),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.107),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.129),
+  0 100px 80px rgba(0, 0, 0, 0.18)
+;
+
+margin-right: 10px;
+margin-left: 10px;
+margin-top: 10px;
+margin-bottom: 10px;
+}

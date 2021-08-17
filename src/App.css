@@ -1,81 +1,51 @@
-.App {
+.app-page {
   text-align: center;
+  background-color: rgb(252, 252, 255);
+  min-height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-.Homepage
-{
-  color: #fff;
-  text-align: center;
-  background-color: #2F4F4F;
-  height: 1000vh;
-}
-.App-header { /* if class name is "App-Header" this will change how it looks*/
- 
-
+.wrap{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+justify-content: center;
+align-items:center;
+padding-top: 20px;
+padding-bottom:20px;
 }
-
-.App-link {
-  color: #61dafb;
+.header-card{
+background-color:#FFF9EC;
+text-align: center;
+width:500px;
+border-radius:5px;
+padding:20px;
+box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.051),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.073),
+  0 12.5px 10px rgba(0, 0, 0, 0.09),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.107),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.129),
+  0 100px 80px rgba(0, 0, 0, 0.18)
+;
 }
-.list { /* creates styling options for the list*/
-
-  box-shadow: 0 0 0 2px #d0d0d0;
-  min: width 5px;;
-  min-height: 3vh;
-  border-radius:5px;
-  margin: bottom 15px;;
-  cursor: pointer;
-}
-
 .menu a { /* controls how the links look */
 text-decoration: none;
 display: block;
-color: #fff;
+color: white;
 }
-.menu2 a { /* controls how the links look */
-  text-decoration: none;
-  color: #fff;
-  }
 
 .menu li{ /* for organizing the links */
   font-size: 1.0;
   height: 40px;
   border-bottom: 1px solid #d0d0d0;
   line-height: 40px;
+  font-family:sans-serif;
  
 }
 
 .menu ul {
-  background-color: #2F4F4F; /* makes background of links same color as webpage */
+  background-color:#33322E; /* makes background of links same color as webpage */
   margin:0;
 }
 
 ul {
   list-style-type:none;
   padding:0;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }

@@ -1,0 +1,94 @@
+.page-background{
+display: flex;
+justify-content: center;
+align-items:center;
+padding-top: 75px;
+}
+.List-Card{
+background-color:#FFF9EC;
+width:500px;
+height: 50vh;
+border-radius:5px;
+padding:20px;
+box-shadow:
+  0 2.8px 2.2px rgba(0, 0, 0, 0.051),
+  0 6.7px 5.3px rgba(0, 0, 0, 0.073),
+  0 12.5px 10px rgba(0, 0, 0, 0.09),
+  0 22.3px 17.9px rgba(0, 0, 0, 0.107),
+  0 41.8px 33.4px rgba(0, 0, 0, 0.129),
+  0 100px 80px rgba(0, 0, 0, 0.18)
+;
+
+}
+.Shopping-Item-Box{
+    margin-top:1em;
+    margin-bottom:1em;
+    display:flex;
+    align-items:center;
+    border-radius:10px;
+    padding:5px;
+
+}
+.item-input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-right: 5px;
+}
+.list-name-input{
+    box-sizing: border-box;
+    width: 300px;
+    height: 30px;
+    margin-right: 5px;
+}
+.number-input{
+    box-sizing: border-box;
+    width: 100%;
+    height: 30px;
+    margin-right: 5px;
+}
+.small-btn{
+    font-size: 13px;
+    width: 75px;
+    height:25px;
+}
+.med-btn{
+    font-size: 13px;
+    width: 75px;
+    height:25px;
+
+}
+.toolTip{
+  padding: 5px;/* controls size of tooltip icon */
+  width: 15px;
+  height: 15px; 
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.toolTip::before,
+.toolTip::after {
+    --scale:0;
+    position:absolute;
+    top:-.25rem;
+    left:50%;
+    transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+.toolTip::before{
+    content: attr(data-tooltip);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    text-align: center;
+    width: max-content;
+    max-width: 85px; /* controls size of tool-tip box */
+    background: #333;
+}
+
+.toolTip:hover::before {
+    --scale:1;
+}
